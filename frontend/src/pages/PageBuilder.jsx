@@ -237,6 +237,62 @@ export default function PageBuilder() {
 
   const selectedComponent = components.find((comp) => comp.id === selectedId)
 
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Don't trigger shortcuts when typing in inputs
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        return
+      }
+
+      // Ctrl+Z or Cmd+Z: Undo
+      if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
+        e.preventDefault()
+        if (historyIndex > 0) {
+          handleUndo()
+        }
+        return
+      }
+
+      // Ctrl+Shift+Z or Cmd+Shift+Z: Redo
+      if ((e.ctrlKey || e.metaKey) && e.key === 'z' && e.shiftKey) {
+        e.preventDefault()
+        if (historyIndex < history.length - 1) {
+          handleRedo()
+        }
+        return
+      }
+
+      // Ctrl+S or Cmd+S: Save
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault()
+        if (!isSaving) {
+          handleSave()
+        }
+        return
+      }
+
+      // Delete or Backspace: Delete selected component
+      if ((e.key === 'Delete' || e.key === 'Backspace') && selectedId && !isPreviewMode) {
+        e.preventDefault()
+        deleteComponent(selectedId)
+        return
+      }
+
+      // Escape: Deselect component
+      if (e.key === 'Escape' && selectedId) {
+        e.preventDefault()
+        setSelectedId(null)
+        return
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [historyIndex, history.length, isSaving, selectedId, isPreviewMode, handleUndo, handleRedo, handleSave, deleteComponent])
+
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="h-screen flex flex-col">
