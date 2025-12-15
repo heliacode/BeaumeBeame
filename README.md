@@ -1,258 +1,357 @@
-# Landing Page Creator Tool
+# BeaumeBeaume - Landing Page Builder
 
-A tool for creating beautiful, modern landing pages with ease.
+<div align="center">
 
-## Overview
+![BeaumeBeaume](https://img.shields.io/badge/BeaumeBeaume-Landing%20Page%20Builder-blue)
+![React](https://img.shields.io/badge/React-18.2-blue)
+![Node.js](https://img.shields.io/badge/Node.js-LTS-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-12+-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3-38bdf8)
 
-This tool will enable users to create professional landing pages quickly and efficiently, whether for marketing campaigns, product launches, event promotions, or personal projects.
+**A powerful, drag-and-drop landing page builder built with React and Node.js**
 
-## Proposed Features
+[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Tech Stack](#tech-stack)
 
-### Core Features
+</div>
 
-#### 1. **Page Builder Interface**
-- Drag-and-drop component system
-- Visual editor with live preview
-- Component library (headers, hero sections, features, testimonials, CTAs, footers)
-- Responsive design controls (mobile, tablet, desktop views)
-- Undo/redo functionality
+---
 
-#### 2. **Template System**
-- Pre-built templates for various use cases:
-  - Product launches
-  - Event promotions
-  - Service offerings
-  - Portfolio showcases
-  - Coming soon pages
-- Template customization
-- Save custom templates for reuse
+## 🎯 Overview
 
-#### 3. **Content Management**
-- Rich text editor for content blocks
-- Image upload and management
-- Media library
-- Icon library integration
-- Video embedding support
+BeaumeBeaume is a modern, intuitive landing page builder that empowers users to create beautiful, professional landing pages without writing a single line of code. With a drag-and-drop interface, real-time preview, and a comprehensive component library, building stunning landing pages has never been easier.
 
-#### 4. **Styling & Customization**
-- Color palette customization
-- Typography controls (fonts, sizes, weights)
-- Spacing controls (padding, margins)
-- Border and shadow options
-- Animation effects
-- Theme presets
+## ✨ Features
 
-#### 5. **Export & Deployment**
-- Export as static HTML/CSS/JS
-- Export as React/Vue components
-- Direct deployment to hosting platforms
-- Generate optimized assets
-- SEO-friendly output
+### 🎨 **Visual Page Builder**
+- **Drag & Drop Interface** - Intuitively drag components from the sidebar onto your canvas
+- **Live Preview** - See your changes in real-time as you build
+- **Component Reordering** - Easily rearrange components by dragging them
+- **Visual Selection** - Click any component to select and edit it
 
-### Advanced Features
+### 🧩 **Component Library**
+- **Header** - Customizable navigation with logo and menu items
+- **Hero Section** - Eye-catching hero sections with CTAs
+- **Features** - Showcase your product features with icons
+- **Testimonials** - Display customer reviews and ratings
+- **Pricing Tables** - Create attractive pricing plans
+- **Call-to-Action** - Compelling CTA sections
+- **Footer** - Professional footer with links and copyright
 
-#### 6. **SEO & Analytics**
-- Meta tags editor
-- Open Graph tags
-- Schema.org markup
-- Google Analytics integration
-- Custom tracking code support
+### 💾 **Save & Manage**
+- **Save Pages** - Save your work to the database
+- **Load Pages** - Open and continue editing saved pages
+- **Dashboard** - Manage all your pages from one place
+- **Delete Pages** - Remove pages you no longer need
 
-#### 7. **Form Integration**
-- Contact form builder
-- Newsletter signup forms
-- Integration with popular services (Mailchimp, SendGrid, etc.)
-- Form validation
-- Custom form fields
+### 🎛️ **Editing Features**
+- **Properties Panel** - Edit component properties in real-time
+- **Undo/Redo** - Full history support with undo/redo functionality
+- **Preview Mode** - Toggle between edit and preview modes
+- **Page Title Editing** - Customize your page title directly in the builder
 
-#### 8. **Performance Optimization**
-- Image optimization
-- Code minification
-- Lazy loading options
-- Performance scoring
-- Lighthouse integration
+### 🎨 **Styling**
+- **Tailwind CSS** - Modern utility-first CSS framework
+- **Responsive Design** - All components are mobile-responsive
+- **Customizable Colors** - Easy color customization through Tailwind
+- **Font Awesome Icons** - Beautiful icons throughout the interface
 
-#### 9. **Collaboration Features**
-- Multi-user editing
-- Version history
-- Comments and annotations
-- Export/import projects
+## 🚀 Tech Stack
 
-#### 10. **Integration Capabilities**
-- Social media links
-- Payment gateway integration (Stripe, PayPal)
-- Third-party widget support
-- API integrations
+### Frontend
+- **React 18** - Modern UI library
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **React DnD** - Drag and drop functionality
+- **Font Awesome** - Icon library
+- **Axios** - HTTP client
 
-## Technical Stack
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework
+- **PostgreSQL** - Relational database
+- **pg** - PostgreSQL client for Node.js
 
-### Selected Technologies
+## 📋 Prerequisites
 
-#### Frontend
-- **Language**: JavaScript (ES6+)
-- **Styling**: Tailwind CSS
-- **Icons**: Font Awesome (FA)
-- **Build Tool**: Vite (recommended for modern development)
+Before you begin, ensure you have the following installed:
 
-#### Backend
-- **Runtime**: Node.js
-- **Framework**: Express.js or Fastify (TBD)
+- **Node.js** (v18 or higher)
+- **PostgreSQL** (v12 or higher)
+- **npm** or **yarn**
 
-#### Database
-- **Primary Database**: PostgreSQL
-- **ORM/Query Builder**: Prisma or Knex.js (TBD)
+## 🔧 Installation
 
-### UI Component Libraries (Tailwind CSS Compatible)
+### 1. Clone the Repository
 
-The following modern UI component libraries work seamlessly with Tailwind CSS and are recommended for building the page builder interface:
+```bash
+git clone https://github.com/heliacode/BeaumeBeaume.git
+cd BeaumeBeaume
+```
 
-#### 1. **Headless UI** (Recommended)
-- **Description**: Unstyled, accessible UI components by Tailwind Labs
-- **Pros**: Built specifically for Tailwind, fully accessible, lightweight
-- **Components**: Dialog, Menu, Listbox, Combobox, Switch, Tabs, Disclosure
-- **Best for**: Core UI primitives, accessibility-first components
+### 2. Install Dependencies
 
-#### 2. **Radix UI**
-- **Description**: Low-level UI primitives with unstyled components
-- **Pros**: Excellent accessibility, highly customizable, works perfectly with Tailwind
-- **Components**: Dialog, Dropdown Menu, Popover, Select, Slider, Tabs, Toast
-- **Best for**: Complex interactive components, advanced UI patterns
+Install dependencies for root, frontend, and backend:
 
-#### 3. **shadcn/ui**
-- **Description**: Re-usable components built with Radix UI and Tailwind CSS
-- **Pros**: Copy-paste components (not a dependency), fully customizable, beautiful defaults
-- **Components**: Button, Card, Form, Input, Select, Dialog, Dropdown, Toast
-- **Best for**: Quick development with beautiful defaults, easy customization
-
-#### 4. **Flowbite**
-- **Description**: Component library built on Tailwind CSS
-- **Pros**: Comprehensive component set, good documentation, includes interactive components
-- **Components**: Buttons, Forms, Modals, Dropdowns, Navigation, Carousel, Datepicker
-- **Best for**: Rapid prototyping, extensive component library needs
-
-#### 5. **DaisyUI**
-- **Description**: Component library for Tailwind CSS
-- **Pros**: Simple class-based API, theme system, many components
-- **Components**: Button, Card, Modal, Form, Navbar, Dropdown, Tabs
-- **Best for**: Quick development, theme customization
-
-#### 6. **Tailwind UI**
-- **Description**: Official Tailwind CSS component examples (paid)
-- **Pros**: Production-ready examples, designed by Tailwind team
-- **Components**: Pre-built page sections and components
-- **Best for**: Reference designs, professional templates
-
-#### 7. **React Aria Components** (if using React)
-- **Description**: Adobe's accessible component library
-- **Pros**: Excellent accessibility, works with Tailwind, React-specific
-- **Components**: Button, Dialog, Select, Combobox, DatePicker, Menu
-- **Best for**: React applications requiring high accessibility standards
-
-### Recommended Combination
-
-For the landing page builder tool, we recommend:
-- **Primary**: **Headless UI** or **Radix UI** for core interactive components
-- **Secondary**: **shadcn/ui** for quick component development and beautiful defaults
-- **Icons**: **Font Awesome** (as specified)
-- **Styling**: **Tailwind CSS** with custom configuration
-
-This combination provides:
-- Full control over styling with Tailwind
-- Accessible, production-ready components
-- Easy customization and theming
-- Modern, performant UI
-
-### Architecture Decisions Needed
-- Client-side only vs. full-stack application
-- Real-time collaboration vs. single-user editing
-- Cloud storage vs. local file system
-- Authentication and user management requirements
-- Frontend framework choice (React, Vue, or vanilla JS)
-
-## User Experience Goals
-
-- **Ease of Use**: Intuitive interface that doesn't require coding knowledge
-- **Speed**: Fast page creation and editing experience
-- **Flexibility**: Balance between ease-of-use and customization power
-- **Quality**: Output should be production-ready and professional
-
-## Questions to Consider
-
-1. **Target Audience**: Who is the primary user? (Marketers, developers, small business owners?)
-2. **Pricing Model**: Free, freemium, or paid?
-3. **Hosting**: Will we provide hosting or export-only?
-4. **Scope**: MVP features vs. full-featured tool?
-5. **Platform**: Web app, desktop app, or both?
-
-## Next Steps
-
-- [x] Choose technology stack (JavaScript, Tailwind CSS, Font Awesome, PostgreSQL)
-- [x] Choose frontend framework (React)
-- [x] Select UI component library (Headless UI)
-- [x] Create project structure
-- [x] Set up development environment
-- [ ] Set up PostgreSQL database
-- [ ] Implement authentication
-- [ ] Build page builder interface
-- [ ] Implement drag-and-drop functionality
-- [ ] Create component library
-- [ ] Add template system
-
-## Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- PostgreSQL (v12 or higher)
-- npm or yarn
-
-### Installation
-
-1. Install all dependencies:
 ```bash
 npm run install:all
 ```
 
-2. Set up environment variables:
+Or install them separately:
+
 ```bash
-cp .env.example .env
-# Edit .env with your database credentials
+# Root dependencies
+npm install
+
+# Frontend dependencies
+cd frontend
+npm install
+cd ..
+
+# Backend dependencies
+cd backend
+npm install
+cd ..
 ```
 
-3. Set up PostgreSQL database:
+### 3. Set Up Environment Variables
+
+Copy the example environment file and configure it:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your configuration:
+
+```env
+# Backend Environment Variables
+NODE_ENV=development
+PORT=3001
+DATABASE_URL=postgresql://user:password@localhost:5432/beaumebeaume
+JWT_SECRET=your-secret-key-change-in-production
+
+# Frontend Environment Variables
+VITE_API_URL=http://localhost:3001
+
+# File Upload
+MAX_FILE_SIZE=5242880
+UPLOAD_DIR=uploads
+```
+
+### 4. Set Up PostgreSQL Database
+
+Create the database:
+
 ```bash
 createdb beaumebeaume
+```
+
+Run migrations:
+
+```bash
 cd backend
 npm run db:migrate
 ```
 
-4. Start development servers:
+(Optional) Seed the database with sample data:
+
+```bash
+npm run db:seed
+```
+
+## 🎮 Usage
+
+### Start Development Servers
+
+Start both frontend and backend servers simultaneously:
+
 ```bash
 npm run dev
 ```
 
 This will start:
-- Frontend on http://localhost:3000
-- Backend API on http://localhost:3001
+- **Frontend** on http://localhost:3000
+- **Backend API** on http://localhost:3001
 
-### Project Structure
+### Start Servers Separately
+
+```bash
+# Frontend only
+npm run dev:frontend
+
+# Backend only
+npm run dev:backend
+```
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This builds both frontend and backend for production.
+
+## 📖 How to Use
+
+### Creating a Landing Page
+
+1. **Start the Builder**
+   - Navigate to http://localhost:3000
+   - Click "Builder" in the navigation or "Create New Page"
+
+2. **Add Components**
+   - Click components in the left sidebar to add them
+   - Or drag components from the sidebar to the canvas
+   - Components stack vertically on your page
+
+3. **Edit Components**
+   - Click any component on the canvas to select it
+   - Use the Properties panel on the right to edit content
+   - Changes appear instantly in the preview
+
+4. **Reorder Components**
+   - Select a component
+   - Drag it using the grip handle to reorder
+
+5. **Preview Your Page**
+   - Click the "Preview" button to see your page without editing controls
+   - Click "Edit" to return to the builder
+
+6. **Save Your Work**
+   - Enter a page title in the toolbar
+   - Click "Save" to save your page
+   - Your page will appear in the Dashboard
+
+### Managing Pages
+
+- **View All Pages** - Go to the Dashboard to see all your saved pages
+- **Edit a Page** - Click the edit icon on any page in the Dashboard
+- **Delete a Page** - Click the delete icon (trash) on any page
+
+## 📁 Project Structure
 
 ```
-beaume-beaume/
-├── frontend/          # React + Vite frontend
+BeaumeBeaume/
+├── frontend/                 # React frontend application
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── App.jsx
-│   └── package.json
-├── backend/           # Express.js backend
-│   ├── config/
-│   ├── database/
-│   ├── scripts/
-│   └── server.js
-└── package.json       # Root package.json with workspace scripts
+│   │   ├── components/      # React components
+│   │   │   ├── landing/     # Landing page components
+│   │   │   └── PageBuilder/ # Builder interface components
+│   │   ├── pages/           # Page components
+│   │   ├── services/        # API services
+│   │   └── App.jsx          # Main app component
+│   ├── public/              # Static assets
+│   └── package.json         # Frontend dependencies
+│
+├── backend/                  # Node.js backend application
+│   ├── config/              # Configuration files
+│   ├── database/            # Database schemas and migrations
+│   ├── routes/              # API routes
+│   ├── scripts/             # Utility scripts
+│   └── server.js            # Express server
+│
+├── .env.example             # Environment variables template
+├── .gitignore               # Git ignore rules
+├── package.json             # Root package.json with workspace scripts
+└── README.md                # This file
 ```
+
+## 🎨 Component Types
+
+### Header
+Navigation bar with logo and menu items. Customize the logo text and menu links.
+
+### Hero
+Large hero section with title, subtitle, and call-to-action buttons. Perfect for the top of your landing page.
+
+### Features
+Display your product or service features in a grid layout. Customize titles, descriptions, and icons.
+
+### Testimonials
+Showcase customer reviews with ratings. Display multiple testimonials in a responsive grid.
+
+### Pricing
+Create pricing tables with multiple plans. Highlight popular plans and customize features.
+
+### Call-to-Action
+Compelling CTA sections to drive conversions. Customize text, button labels, and colors.
+
+### Footer
+Professional footer with copyright and links. Perfect for the bottom of your page.
+
+## 🔌 API Endpoints
+
+### Pages
+
+- `GET /api/pages` - Get all pages
+- `GET /api/pages/:id` - Get a single page
+- `POST /api/pages` - Create a new page
+- `PUT /api/pages/:id` - Update a page
+- `DELETE /api/pages/:id` - Delete a page
+
+### Health Check
+
+- `GET /api/health` - Check API status
+
+## 🛠️ Development
+
+### Code Style
+
+The project uses ESLint for code quality. Run linting:
+
+```bash
+# Frontend
+cd frontend
+npm run lint
+
+# Backend
+cd backend
+npm run lint
+```
+
+### Database Migrations
+
+Run database migrations:
+
+```bash
+cd backend
+npm run db:migrate
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- [React](https://react.dev/) - UI library
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Font Awesome](https://fontawesome.com/) - Icons
+- [React DnD](https://react-dnd.github.io/react-dnd/) - Drag and drop
+- [Vite](https://vitejs.dev/) - Build tool
+- [Express.js](https://expressjs.com/) - Web framework
+
+## 📧 Support
+
+For support, please open an issue on the [GitHub repository](https://github.com/heliacode/BeaumeBeaume/issues).
 
 ---
 
-*This document is a living specification and will be updated as we refine the feature set and requirements.*
+<div align="center">
 
+Made with ❤️ by the BeaumeBeaume team
+
+**[⬆ Back to Top](#beaumebeaume---landing-page-builder)**
+
+</div>
